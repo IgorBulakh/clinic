@@ -1,0 +1,37 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+.box-header {
+  &--center {
+    text-align: center;
+  }
+  // .box-header__label
+  &__label {
+    display: inline-block;
+    padding: toRem(4) toRem(12);
+    font-size: toRem(11);
+    text-transform: uppercase;
+    letter-spacing: toRem(4);
+    color: $colorLight;
+    background: linear-gradient(90deg, $colorBlue900 0%, $colorBlue100 100%);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+
+    &--blue {
+      background: linear-gradient(90deg, $colorBlue100 0%, $colorBlue100 100%);
+    }
+  }
+  // .box-header__title
+  &__title {
+    @include adaptiveValue("font-size", 50, 25);
+    line-height: 1.2;
+    letter-spacing: toRem(1);
+    text-transform: capitalize;
+    color: $colorGray900;
+
+    &--big {
+      @include adaptiveValue("font-size", 55, 28);
+    }
+  }
+}
