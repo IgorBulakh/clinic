@@ -1,5 +1,20 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
+.logo {
+  // padding: toRem(8) toRem(28);
+  font-size: toRem(14);
+  line-height: 2;
+  text-transform: uppercase;
+  color: $colorGray100;
+  background-color: $colorBlue100;
+
+  & span {
+    padding: toRem(8) toRem(28);
+    color: $colorBlue100;
+    background-color: $colorBlue900;
+  }
+}
+
 .box-header {
   &--center {
     text-align: center;
