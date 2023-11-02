@@ -1,5 +1,115 @@
 //====================================================================================================
+.header {
+	// .header__container
+	&__container {
+	}
+	// .header__info
+	&__info {
+	}
+	// .header__body
+	&__body {
+	}
+}
 
+.info-header {
+	display: grid;
+	// grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: auto auto 1fr;
+	align-items: center;
+	@include adaptiveValue("gap", 130, 20);
+	min-height: toRem(90);
+
+	// .info-header__link
+	&__link {
+		display: flex;
+		align-items: center;
+		gap: toRem(10);
+		font-size: toRem(10);
+		line-height: 1.5;
+		// color: $colorLight;
+		letter-spacing: toRem(3);
+		text-transform: uppercase;
+		transition: color 0.3s ease 0s;
+
+		& span {
+			background-color: $colorBlue100;
+			padding: toRem(2) toRem(10);
+			margin-right: toRem(10);
+		}
+
+		&:last-child {
+			justify-self: end;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $colorBlue900;
+			}
+		}
+	}
+}
+
+.body-header {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-items: center;
+
+	// .body-header__logo
+	&__logo {
+		justify-self: start;
+		margin-left: toRem(10);
+		position: relative;
+
+		&::before {
+			position: absolute;
+			content: "";
+			top: 0;
+			left: toRem(-10);
+			width: toRem(4);
+			height: toRem(65);
+			background-color: $colorBlue100;
+		}
+
+		& span {
+			padding: toRem(0) toRem(28);
+			&:nth-child(2) {
+				background-color: $colorBlue900;
+				color: $colorBlue100;
+			}
+		}
+	}
+
+	// .body-header__menu
+	&__menu {
+	}
+	// .body-header__button
+	&__button {
+		justify-self: end;
+		padding: toRem(24) toRem(49);
+		font-size: toRem(15);
+		letter-spacing: toRem(3);
+	}
+}
+
+.menu {
+	// .menu__icon
+	&__icon {
+	}
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		text-transform: uppercase;
+		letter-spacing: toRem(3);
+	}
+}
 //====================================================================================================
 
 //Burger

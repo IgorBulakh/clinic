@@ -1,17 +1,19 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
 .logo {
-  // padding: toRem(8) toRem(28);
+  display: inline-flex;
   font-size: toRem(14);
   line-height: 2;
   text-transform: uppercase;
-  color: $colorGray100;
+  letter-spacing: toRem(3);
+  color: $colorLight;
   background-color: $colorBlue100;
+  transition: opacity 0.3s ease 0s;
 
-  & span {
-    padding: toRem(8) toRem(28);
-    color: $colorBlue100;
-    background-color: $colorBlue900;
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 
