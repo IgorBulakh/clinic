@@ -8,10 +8,24 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<div class="box-header box-header--center">
+			<section class="page__section section-hero">
+				<div class="section-hero__slider swiper">
+					<div class="section-hero__wrapper swiper-wrapper">
+						<div class="section-hero__slide swiper-slide">
+							<div class="section-hero__container">
+
+							</div>
+						</div>
+						<div class="section-hero__image">
+							<img src="@img/main/baner-1.jpg" alt="">
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- <div class="box-header box-header--center">
 				<div class="box-header__label box-header__label--blue">about us</div>
 				<h2 class="box-header__title">plastic surgery</h2>
-			</div>
+			</div> -->
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

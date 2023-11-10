@@ -1,5 +1,11 @@
 //====================================================================================================
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+
 	// .header__container
 	&__container {
 	}
@@ -13,11 +19,18 @@
 
 .info-header {
 	display: grid;
-	// grid-template-columns: repeat(3, 1fr);
-	grid-template-columns: auto auto 1fr;
 	align-items: center;
-	@include adaptiveValue("gap", 130, 20);
-	min-height: toRem(90);
+	min-height: toRem(50);
+	row-gap: toRem(15);
+
+	@media (min-width: $mobile) {
+		grid-template-columns: auto auto 1fr;
+		@include adaptiveValue("column-gap", 130, 20);
+	}
+
+	@media (min-width: $tablet) {
+		min-height: toRem(90);
+	}
 
 	// .info-header__link
 	&__link {
@@ -26,19 +39,39 @@
 		gap: toRem(10);
 		font-size: toRem(10);
 		line-height: 1.5;
-		// color: $colorLight;
+		color: $colorLight;
 		letter-spacing: toRem(3);
 		text-transform: uppercase;
 		transition: color 0.3s ease 0s;
 
-		& span {
+		& mark {
 			background-color: $colorBlue100;
 			padding: toRem(2) toRem(10);
 			margin-right: toRem(10);
 		}
 
-		&:last-child {
-			justify-self: end;
+		& span {
+			@media (min-width: $mobile) and (max-width: $tablet) {
+				display: none;
+			}
+		}
+
+		@media (min-width: $mobile) {
+			&:last-child {
+				justify-self: end;
+			}
+		}
+
+		@media (max-width: $mobile) {
+			justify-self: center;
+
+			&:nth-child(1) {
+				order: 1;
+			}
+
+			&:nth-child(3) {
+				order: 3;
+			}
 		}
 
 		@media (any-hover: hover) {
@@ -51,27 +84,66 @@
 
 .body-header {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
+	grid-template-columns: auto auto 1fr;
 	align-items: center;
+	column-gap: toRem(80);
+	// @include adaptiveValue("gap", 90, 20);
+
+	@media (max-width: $pc) {
+		// grid-template-columns: 1fr auto 1fr;
+		grid-template-columns: auto 1fr auto auto;
+		column-gap: toRem(30);
+	}
+
+	@media (max-width: $mobile) {
+		padding: toRem(15) toRem(0);
+		column-gap: toRem(10);
+	}
 
 	// .body-header__logo
 	&__logo {
 		justify-self: start;
-		margin-left: toRem(10);
 		position: relative;
 
-		&::before {
-			position: absolute;
-			content: "";
-			top: 0;
-			left: toRem(-10);
-			width: toRem(4);
-			height: toRem(65);
-			background-color: $colorBlue100;
+		@media (min-width: $mobile) {
+			padding-left: toRem(16);
+
+			&::before {
+				position: absolute;
+				content: "";
+				width: toRem(4);
+				height: toRem(65);
+				top: 50%;
+				left: 0;
+				transform: translateY(-50%);
+				background-color: $colorBlue100;
+			}
+
+			&::after {
+				position: absolute;
+				content: "";
+				width: toRem(60);
+				height: toRem(40);
+				top: 50%;
+				right: 50%;
+				transform: translate(50%, -50%);
+				background-color: $colorGray100;
+			}
 		}
 
 		& span {
-			padding: toRem(0) toRem(28);
+			padding: toRem(0) toRem(18);
+			position: relative;
+			z-index: 2;
+
+			@media (min-width: $mobileMedium) {
+				padding: toRem(0) toRem(28);
+			}
+
+			&:nth-child(1) {
+				background-color: $colorBlue100;
+			}
+
 			&:nth-child(2) {
 				background-color: $colorBlue900;
 				color: $colorBlue100;
@@ -84,10 +156,27 @@
 	}
 	// .body-header__button
 	&__button {
-		justify-self: end;
-		padding: toRem(24) toRem(49);
-		font-size: toRem(15);
-		letter-spacing: toRem(3);
+		padding: toRem(24) toRem(39);
+		@include adaptiveValue("font-size", 15, 11);
+		position: relative;
+		z-index: 5;
+
+		@media (min-width: $mobileMedium) {
+			letter-spacing: toRem(3);
+		}
+
+		@media (min-width: $tablet) {
+			justify-self: end;
+		}
+
+		@media (max-width: $pc) {
+			padding: toRem(15) toRem(30);
+		}
+
+		@media (max-width: $mobileMedium) {
+			padding: toRem(8) toRem(12);
+			// font-size: toRem(12);
+		}
 	}
 }
 
@@ -97,26 +186,104 @@
 	}
 	// .menu__body
 	&__body {
+		@media (max-width: $tablet) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow: auto;
+			top: 0;
+			left: -100%;
+			padding: toRem(170) toRem(15) toRem(15) toRem(30);
+			background-color: $colorBlue900;
+			transition: all 0.3s ease 0s;
+			color: $colorGray100;
+
+			.menu-open & {
+				left: 0;
+			}
+		}
 	}
 	// .menu__list
 	&__list {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: toRem(40);
+
+		@media (min-width: $tablet) {
+			flex-direction: row;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			column-gap: toRem(45);
+			row-gap: toRem(10);
+			&::before {
+				position: absolute;
+				content: "";
+				width: toRem(60);
+				height: toRem(40);
+				top: 50%;
+				left: 51%;
+				transform: translate(-50%, -50%);
+				background-color: $colorGray100;
+			}
+		}
+		@media (max-width: $pc) {
+			column-gap: toRem(20);
+		}
+
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: toRem(30);
+			}
+		}
 	}
 	// .menu__item
 	&__item {
 	}
+
 	// .menu__link
 	&__link {
+		position: relative;
+		padding: toRem(5) toRem(2);
+		font-size: toRem(20);
 		text-transform: uppercase;
 		letter-spacing: toRem(3);
+
+		&::after {
+			position: absolute;
+			content: "";
+			height: toRem(2);
+			// width: 100%;
+			width: 0;
+			right: 0;
+			bottom: 0;
+			border-radius: toRem(5);
+			background-color: $colorBlue100;
+			transition: all 0.3s ease 0s;
+		}
+
+		@media (min-width: $tablet) {
+			font-size: toRem(14);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::after {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
 	}
 }
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
-	@media (max-width: $mobile) {
+	@media (max-width: $tablet) {
 		display: block;
 		position: relative;
 		width: toRem(30);
@@ -163,4 +330,3 @@
 		}
 	}
 }
-*/
