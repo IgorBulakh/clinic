@@ -249,12 +249,12 @@
 		font-size: toRem(20);
 		text-transform: uppercase;
 		letter-spacing: toRem(3);
+		color: $colorGray300;
 
 		&::after {
 			position: absolute;
 			content: "";
 			height: toRem(2);
-			// width: 100%;
 			width: 0;
 			right: 0;
 			bottom: 0;
@@ -269,6 +269,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
+				color: $colorBlue900;
 				&::after {
 					width: 100%;
 					left: 0;

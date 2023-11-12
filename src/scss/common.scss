@@ -1,4 +1,9 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.page {
+  // .page__section
+  &__section {
+  }
+}
 
 .logo {
   display: inline-flex;

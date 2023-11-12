@@ -1,3 +1,115 @@
 //====================================================================================================
 
+.section-hero {
+  // .section-hero__slider
+  &__slider {
+  }
+  // .section-hero__wrapper
+  &__wrapper {
+  }
+  // .section-hero__slide
+  &__slide {
+    position: relative;
+    min-height: 100vh;
+  }
+  // .section-hero__container
+  &__container {
+    position: relative;
+    min-height: 100vh;
+    @include adaptiveValue("padding-top", 180, 100);
+    @include adaptiveValue("padding-bottom", 180, 150);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: toRem(30);
+    z-index: 5;
+  }
+  // .section-hero__top
+  &__top {
+    display: grid;
+    grid-gap: toRem(15);
+    justify-items: start;
+  }
+  // .section-hero__label
+  &__label {
+    padding: toRem(6) toRem(30);
+    letter-spacing: toRem(2);
+    text-transform: uppercase;
+    color: $colorBlue900;
+    color: $colorLight;
+    background-color: $colorBlue900;
+  }
+  // .section-hero__sub-title
+  &__sub-title {
+    @include adaptiveValue("font-size", 100, 30);
+    font-weight: 700;
+    color: $colorLight;
+  }
+  // .section-hero__title
+  &__title {
+    @include adaptiveValue("font-size", 130, 50);
+    font-weight: 700;
+    color: $colorLight;
+    text-transform: capitalize;
+  }
+  // .section-hero__bottom
+  &__bottom {
+    @media (min-width: $mobileMedium) {
+      display: flex;
+      @include adaptiveValue("column-gap", 100, 30);
+    }
+  }
+  // .section-hero__link
+  &__link {
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: toRem(25);
+    font-weight: 700;
+    text-transform: capitalize;
+    color: $colorLight;
+    transition: color 0.3s ease 0s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: $colorBlue900;
+      }
+    }
+
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(20);
+    }
+  }
+  // .section-hero__text
+  &__text {
+    max-width: toRem(450);
+    color: $colorLight;
+    font-size: toRem(16);
+    line-height: 1.8;
+  }
+  // .section-hero__image-ibg
+  &__image-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+      z-index: 2;
+    }
+  }
+
+  // .section-hero__control
+  &__control {
+  }
+}
+
 //====================================================================================================
