@@ -1,6 +1,7 @@
 //====================================================================================================
 
 .section-hero {
+  position: relative;
   // .section-hero__slider
   &__slider {
   }
@@ -108,7 +109,48 @@
   }
 
   // .section-hero__control
+
   &__control {
+    @include adaptiveValue("padding-top", 180, 100);
+    @include adaptiveValue("padding-bottom", 180, 150);
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: toRem(120);
+  }
+}
+
+.control-main {
+  // .control-main__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: toRem(10);
+    min-height: 70%;
+    color: $colorLight;
+    font-size: toRem(18);
+    letter-spacing: toRem(1);
+    z-index: 5;
+    div {
+      cursor: pointer;
+    }
+
+    span {
+      &:not(:last-child) {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: center;
+        pointer-events: none;
+        width: toRem(1);
+        background-color: $colorLight;
+      }
+    }
   }
 }
 

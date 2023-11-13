@@ -59,8 +59,13 @@ function initSliders() {
       // Пагінація
 
       pagination: {
-        el: ".section-hero__control",
+        el: ".control-main__body",
         clickable: true,
+        renderBullet: function (index, className) {
+          return `<div class="${className}">${
+            index < 10 ? "0" + (index + 1) : index + 1
+          }</div><span></span>`;
+        },
       },
 
       // Скроллбар
