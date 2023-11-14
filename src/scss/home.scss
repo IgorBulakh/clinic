@@ -103,7 +103,7 @@
       height: 100%;
       top: 0;
       left: 0;
-      background: linear-gradient(90deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.1) 100%);
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%);
       z-index: 2;
     }
   }
@@ -111,16 +111,25 @@
   // .section-hero__control
 
   &__control {
-    @include adaptiveValue("padding-top", 180, 100);
-    @include adaptiveValue("padding-bottom", 180, 150);
     position: absolute;
     right: 0;
-    top: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: toRem(120);
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("padding-top", 180, 100);
+      @include adaptiveValue("padding-bottom", 180, 150);
+      position: absolute;
+      top: 0;
+      align-items: center;
+      height: 100%;
+      width: toRem(120);
+    }
+
+    @media (max-width: $tablet) {
+      width: 100%;
+      bottom: toRem(200);
+    }
   }
 }
 
@@ -128,17 +137,25 @@
   // .control-main__body
   &__body {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    gap: toRem(10);
+    // justify-content: space-between;
+    row-gap: toRem(10);
+    column-gap: toRem(20);
     min-height: 70%;
     color: $colorLight;
     font-size: toRem(18);
     letter-spacing: toRem(1);
     z-index: 5;
+
+    @media (min-width: $tablet) {
+      flex-direction: column;
+      align-items: center;
+    }
     div {
       cursor: pointer;
+      transition: color 0.3s ease 0s;
+      &.swiper-pagination-bullet-active {
+        color: $colorBlue100;
+      }
     }
 
     span {
@@ -155,3 +172,142 @@
 }
 
 //====================================================================================================
+
+.get-touch {
+  // .get-touch__container
+  &__container {
+  }
+  // .get-touch__box
+  &__box {
+    position: relative;
+    display: grid;
+    @include adaptiveValue("column-gap", 40, 20);
+    padding: toRem(40) toRem(50);
+    background: url("@img/touch/font.jpg") center / cover no-repeat;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba($colorBlue100, 0.9);
+    }
+
+    @media (min-width: $mobile) {
+      &::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: toRem(4);
+        height: 100%;
+        background-color: $colorBlue900;
+        z-index: 2;
+      }
+    }
+
+    @media (min-width: $tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  // .get-touch__body
+  &__body {
+    position: relative;
+    z-index: 2;
+  }
+  // .get-touch__form
+  &__form {
+    position: relative;
+    display: grid;
+    row-gap: toRem(20);
+    z-index: 2;
+
+    @media (min-width: $mobileMedium) {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: toRem(35);
+      align-content: center;
+    }
+
+    @media (max-width: $tablet) {
+      column-gap: toRem(50);
+    }
+  }
+}
+.body-touch {
+  letter-spacing: toRem(1);
+  // .body-touch__title
+  &__title {
+    @include adaptiveValue("font-size", 50, 30);
+    letter-spacing: 1.2;
+    line-height: 1.5;
+    color: $colorLight;
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(15);
+    }
+  }
+  // .body-touch__text
+  &__text {
+    max-width: toRem(467);
+    line-height: 2;
+    color: $colorLight;
+
+    a {
+      text-decoration: underline;
+
+      @media (any-hover: hover) {
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+.form-touch {
+  // .form-touch__line
+  &__line {
+    position: relative;
+
+    .form__error {
+      position: absolute;
+      // top: 80%;
+      top: 30%;
+      right: toRem(20);
+      color: red;
+    }
+  }
+  // .form-touch__input
+  &__input {
+    padding: toRem(0) toRem(20);
+    &::placeholder {
+      color: $colorLight;
+      text-transform: capitalize;
+    }
+  }
+  // .form-touch__button
+  &__button {
+    justify-content: center;
+    align-items: center;
+    font-size: toRem(16);
+    letter-spacing: toRem(2);
+    background-color: $colorBlue900;
+    border: toRem(1) solid transparent;
+    transition: all 0.3s ease 0s;
+
+    @media (max-width: $mobileMedium) {
+      padding-top: toRem(10);
+      padding-bottom: toRem(10);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: transparent;
+        border-color: $colorLight;
+      }
+    }
+  }
+}

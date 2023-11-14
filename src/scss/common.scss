@@ -1,7 +1,16 @@
 // Заголовки, загальні БЕМ блоки та інше...
 .page {
   // .page__section
-  &__section {
+  &__hero-section {
+  }
+
+  &__touch-section {
+    margin-top: toRem(-150);
+
+    @media (max-width: $mobile) {
+      margin-left: toRem(-15);
+      margin-right: toRem(-15);
+    }
   }
 }
 

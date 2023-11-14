@@ -12,11 +12,14 @@ textarea {
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	min-height: toRem(41);
+	// padding: 0px 20px;
+	background-color: transparent;
+	border-bottom: toRem(1) solid $colorLight;
 	&._form-focus {
 	}
 	&._form-error {
+		border-bottom: toRem(1) solid red;
 	}
 }
 .input[placeholder]:not([data-placeholder-nohiden]) {

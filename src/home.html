@@ -8,7 +8,7 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="page__section section-hero">
+			<section class="page__hero-section section-hero">
 				<div class="section-hero__slider swiper">
 					<div class="section-hero__wrapper swiper-wrapper">
 						<div class="section-hero__slide swiper-slide">
@@ -48,7 +48,7 @@
 								</div>
 							</div>
 							<div class="section-hero__image-ibg">
-								<img src="@img/main/baner-1.jpg" alt="">
+								<img src="@img/main/baner-2.jpg" alt="">
 							</div>
 						</div>
 						<div class="section-hero__slide swiper-slide">
@@ -68,7 +68,7 @@
 								</div>
 							</div>
 							<div class="section-hero__image-ibg">
-								<img src="@img/main/baner-1.jpg" alt="">
+								<img src="@img/main/baner-3.jpg" alt="">
 							</div>
 						</div>
 					</div>
@@ -78,8 +78,36 @@
 					</div>
 				</div>
 			</section>
+			<section class="page__touch-section get-touch">
+				<div class="get-touch__container">
+					<div class="get-touch__box">
+						<div class="get-touch__body body-touch">
+							<h2 class="body-touch__title">get in touch</h2>
+							<div class="body-touch__text">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. <a href="#">Suspendisse
+										scelerisque</a> felis.
+								</p>
+							</div>
+						</div>
+						<form class="get-touch__form form-touch" action="#">
+							<div class="form-touch__line">
+								<input class="form-touch__input input" autocomplete="off" type="text" name="form[]" placeholder="name">
+							</div>
+							<div class="form-touch__line">
+								<input data-required="email" class="form-touch__input input" autocomplete="off" type="email"
+									name="form[]" data-error="Error" placeholder="email">
+							</div>
+							<div class="form-touch__line">
+								<input class="form-touch__input input" autocomplete="off" type="text" name="form[]"
+									placeholder="message">
+							</div>
+							<button class="form-touch__button button" type="submit">contact</button>
+						</form>
+					</div>
+				</div>
+			</section>
 			<!-- <div class="box-header box-header--center">
-				<div class="box-header__label box-header__label--blue">about us</div>
+				<div class="box-header__label box-header__label--blue">about us</div> 
 				<h2 class="box-header__title">plastic surgery</h2>
 			</div> -->
 		</main>

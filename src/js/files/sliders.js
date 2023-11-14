@@ -31,7 +31,7 @@ function initSliders() {
   if (document.querySelector(".section-hero__slider")) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
-    new Swiper(".swiper", {
+    const mainSlider = new Swiper(".swiper", {
       // Вказуємо склас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
@@ -60,9 +60,9 @@ function initSliders() {
 
       pagination: {
         el: ".control-main__body",
-        clickable: true,
+        clickable: false,
         renderBullet: function (index, className) {
-          return `<div class="${className}">${
+          return `<div data-slide="${index}" class="${className}">${
             index < 10 ? "0" + (index + 1) : index + 1
           }</div><span></span>`;
         },
@@ -107,6 +107,16 @@ function initSliders() {
 			*/
       // Події
       on: {},
+    });
+    document.addEventListener("click", function (e) {
+      const targetElement = e.target;
+      if (
+        targetElement.classList.contains("swiper-pagination-bullet") &&
+        targetElement.closest(".control-main")
+      ) {
+        const sliderId = +targetElement.dataset.slide;
+        mainSlider.slideTo(sliderId, 800);
+      }
     });
   }
 }
