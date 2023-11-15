@@ -46,6 +46,10 @@
     @include adaptiveValue("font-size", 100, 30);
     font-weight: 700;
     color: $colorLight;
+    @include adaptiveValue("letter-spacing", -5, 0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: em(1, 100) #fff;
   }
   // .section-hero__title
   &__title {
@@ -182,7 +186,10 @@
     position: relative;
     display: grid;
     @include adaptiveValue("column-gap", 40, 20);
-    padding: toRem(40) toRem(50);
+    padding-bottom: toRem(40);
+    @include adaptiveValue("padding-top", 40, 20);
+    @include adaptiveValue("padding-left", 50, 20);
+    @include adaptiveValue("padding-right", 50, 20);
     background: url("@img/touch/font.jpg") center / cover no-repeat;
 
     &::before {
@@ -274,7 +281,6 @@
 
     .form__error {
       position: absolute;
-      // top: 80%;
       top: 30%;
       right: toRem(20);
       color: red;

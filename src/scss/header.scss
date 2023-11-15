@@ -5,9 +5,17 @@
 	left: 0;
 	width: 100%;
 	z-index: 50;
+	transition: background 0.5s;
+
+	&._header-scroll {
+		background: linear-gradient(90deg, rgba($colorBlue900, 0.7) 0%, rgba($colorBlue100, 0.6) 100%);
+	}
 
 	// .header__container
 	&__container {
+		@media (min-width: $mobile) {
+			padding-bottom: toRem(10);
+		}
 	}
 	// .header__info
 	&__info {
@@ -147,6 +155,11 @@
 			&:nth-child(2) {
 				background-color: $colorBlue900;
 				color: $colorBlue100;
+
+				._header-scroll & {
+					color: $colorLight;
+					background: linear-gradient(90deg, $colorBlue900 0%, $colorBlue100 100%);
+				}
 			}
 		}
 	}
@@ -194,7 +207,7 @@
 			top: 0;
 			left: -100%;
 			padding: toRem(170) toRem(15) toRem(15) toRem(30);
-			background-color: $colorBlue900;
+			background-color: rgba($colorBlue900, 0.95);
 			transition: all 0.3s ease 0s;
 			color: $colorGray100;
 
@@ -302,7 +315,7 @@
 			position: absolute;
 			width: 100%;
 			height: toRem(2);
-			background-color: #000;
+			background-color: $colorLight;
 		}
 		&::before {
 			top: 0;
