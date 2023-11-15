@@ -18,18 +18,18 @@
     position: relative;
     min-height: 100vh;
     @include adaptiveValue("padding-top", 180, 100);
-    @include adaptiveValue("padding-bottom", 180, 150);
+    padding-bottom: toRem(200);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    gap: toRem(30);
+    @include adaptiveValue("gap", 30, 15);
     z-index: 5;
   }
   // .section-hero__top
   &__top {
     display: grid;
-    grid-gap: toRem(15);
+    @include adaptiveValue("gap", 15, 10);
     justify-items: start;
   }
   // .section-hero__label
@@ -71,22 +71,22 @@
     color: $colorLight;
     transition: color 0.3s ease 0s;
 
+    @media (max-width: $mobile) {
+      margin-bottom: toRem(15);
+    }
+
     @media (any-hover: hover) {
       &:hover {
         color: $colorBlue900;
       }
-    }
-
-    @media (max-width: $mobile) {
-      margin-bottom: toRem(20);
     }
   }
   // .section-hero__text
   &__text {
     max-width: toRem(450);
     color: $colorLight;
-    font-size: toRem(16);
-    line-height: 1.8;
+    @include adaptiveValue("font-size", 16, 14);
+    line-height: 1.6;
   }
   // .section-hero__image-ibg
   &__image-ibg {
@@ -119,8 +119,8 @@
     @media (min-width: $tablet) {
       @include adaptiveValue("padding-top", 180, 100);
       @include adaptiveValue("padding-bottom", 180, 150);
-      position: absolute;
-      top: 0;
+      // top: 0;
+      bottom: 0;
       align-items: center;
       height: 100%;
       width: toRem(120);
@@ -128,7 +128,7 @@
 
     @media (max-width: $tablet) {
       width: 100%;
-      bottom: toRem(200);
+      bottom: toRem(180);
     }
   }
 }
