@@ -4,6 +4,22 @@
   &__hero-section {
   }
 
+  // .page__background-wrap
+  &__background-wrap {
+    position: relative;
+    background: url("@img/plastic/backgraund.jpg") top / cover no-repeat;
+    &::before {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($colorLight, 0.8);
+    }
+  }
+
+  // .page__touch-section
   &__touch-section {
     margin-top: toRem(-150);
 
@@ -11,6 +27,10 @@
       margin-left: toRem(-15);
       margin-right: toRem(-15);
     }
+  }
+
+  // .page__plastic
+  &__plastic {
   }
 }
 
@@ -132,5 +152,9 @@
     line-height: 1.5;
     letter-spacing: toRem(2);
     text-transform: capitalize;
+
+    .content-block__data & {
+      text-transform: uppercase;
+    }
   }
 }

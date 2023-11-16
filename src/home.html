@@ -78,38 +78,107 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__touch-section get-touch">
-				<div class="get-touch__container">
-					<div class="get-touch__box">
-						<div class="get-touch__body body-touch">
-							<h2 class="body-touch__title">get in touch</h2>
-							<div class="body-touch__text">
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. <a href="#">Suspendisse
-										scelerisque</a> felis.
-								</p>
+			<div class="page__background-wrap">
+				<section class="page__touch-section get-touch">
+					<div class="get-touch__container">
+						<div class="get-touch__box">
+							<div class="get-touch__body body-touch">
+								<h2 class="body-touch__title">get in touch</h2>
+								<div class="body-touch__text">
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. <a
+											href="#">Suspendisse
+											scelerisque</a> felis.
+									</p>
+								</div>
+							</div>
+							<form class="get-touch__form form-touch" action="#">
+								<div class="form-touch__line">
+									<input class="form-touch__input input" autocomplete="off" type="text" name="form[]"
+										placeholder="name">
+								</div>
+								<div class="form-touch__line">
+									<input data-required="email" class="form-touch__input input" autocomplete="off" type="email"
+										name="form[]" data-error="Error" placeholder="email">
+								</div>
+								<div class="form-touch__line">
+									<input class="form-touch__input input" autocomplete="off" type="text" name="form[]"
+										placeholder="message">
+								</div>
+								<button class="form-touch__button button" type="submit">contact</button>
+							</form>
+						</div>
+					</div>
+				</section>
+				<section class="page__plastic plastic">
+					<div class="plastic__container">
+						<div class="plastic__box-pictures pictures-box">
+							<div class="pictures-box__item-ibg">
+								<img src="@img/plastic/big.jpg" alt="two people speac">
+							</div>
+							<div class="pictures-box__item-ibg">
+								<img src="@img/plastic/small.jpg" alt="face woman">
 							</div>
 						</div>
-						<form class="get-touch__form form-touch" action="#">
-							<div class="form-touch__line">
-								<input class="form-touch__input input" autocomplete="off" type="text" name="form[]" placeholder="name">
+						<div class="plastic__content content-block">
+							<div class="content-block__title box-header">
+								<div class="box-header__label">about us</div>
+								<h2 class="box-header__title">plastic surgery</h2>
 							</div>
-							<div class="form-touch__line">
-								<input data-required="email" class="form-touch__input input" autocomplete="off" type="email"
-									name="form[]" data-error="Error" placeholder="email">
+							<div class="content-block__info">
+								<div class="content-block__text">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. Suspendisse
+										scelerisque
+										felis ante, et
+										mattis felis scelerisque sodales. Aenean id imperdiet lectus. Lorem ipsum dolor sit amet,
+										consectetur
+										adipiscing elit
+										nulla.
+									</p>
+								</div>
+								<div class="content-block__preview">
+									<div class="content-block__pre-picture-ibg">
+										<img src="@img/plastic/hends-full.jpg" alt="hands">
+									</div>
+									<div class="content-block__text">
+										<p>
+											Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus,<a href="#">luctus nec
+												ullamcorper
+												mattis lorem</a>
+											ipsum dolor
+										</p>
+									</div>
+								</div>
+								<div class="content-block__text">
+									<p>
+										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc eros. Suspendisse
+										scelerisque
+										felis ante, et
+										mattis felis scelerisque sodales. Aenean id imperdiet lectus. Lorem ipsum dolor sit amet,
+										consectetur
+										adipiscing elit
+										nulla.
+									</p>
+								</div>
 							</div>
-							<div class="form-touch__line">
-								<input class="form-touch__input input" autocomplete="off" type="text" name="form[]"
-									placeholder="message">
+							<div class="content-block__data">
+								<div class="content-block__content-data content-user">
+									<a class="content-user__avatar content-user__avatar--radius" href="#">
+										<img src="@img/footer/avatat.jpg" alt="user photo">
+									</a>
+									<div class="content-user__info">
+										<a class="content-user__name" href="#">stephen mcmiller</a>
+										<div class="content-user__position">main doctor</div>
+									</div>
+								</div>
+								<div class="content-block__signature">
+									<img src="@img/plastic/signature.png" alt="signature">
+								</div>
 							</div>
-							<button class="form-touch__button button" type="submit">contact</button>
-						</form>
+						</div>
 					</div>
-				</div>
-			</section>
-			<!-- <div class="box-header box-header--center">
-				<div class="box-header__label box-header__label--blue">about us</div> 
-				<h2 class="box-header__title">plastic surgery</h2>
-			</div> -->
+				</section>
+			</div>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
