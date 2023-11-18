@@ -406,6 +406,7 @@
   &__preview {
     display: flex;
     flex-direction: column;
+    row-gap: toRem(20);
     @media (min-width: $mobileMedium) {
       @include adaptiveValue("gap", 30, 15);
       flex-direction: row;
