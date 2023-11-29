@@ -270,10 +270,12 @@
 
     a {
       text-decoration: underline;
+      transition: color 0.5s ease 0s;
 
       @media (any-hover: hover) {
         &:hover {
           text-decoration: none;
+          color: $colorBlue900;
         }
       }
     }
