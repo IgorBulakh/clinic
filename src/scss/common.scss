@@ -166,3 +166,39 @@
     }
   }
 }
+
+.label-box {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  gap: toRem(5);
+
+  &__link {
+    padding: toRem(5) toRem(12);
+    font-size: toRem(10);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: toRem(4);
+    color: $colorLight;
+    text-align: center;
+    transition: background-color 0.3s ease 0s;
+
+    &--blue {
+      background-color: $colorBlue900;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $colorBlue100;
+        }
+      }
+    }
+
+    &--green {
+      background-color: $colorBlue100;
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $colorBlue900;
+        }
+      }
+    }
+  }
+}

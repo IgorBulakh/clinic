@@ -453,6 +453,7 @@
 
 //=====service===============================================================================================
 .services-block {
+  @include adaptiveValue("padding-bottom", 120, 50);
   // .services-block__container
   &__container {
   }
@@ -472,7 +473,7 @@
 }
 .cart-service {
   position: relative;
-  padding-bottom: toRem(10);
+  // padding-bottom: toRem(10);
 
   @media (any-hover: hover) {
     &:hover {
@@ -485,41 +486,10 @@
   }
   // .cart-service__label
   &__label {
-    position: absolute;
     top: toRem(26);
     left: toRem(20);
-    z-index: 2;
-    display: grid;
-    gap: toRem(5);
   }
-  // .cart-service__link-label
-  &__link-label {
-    padding: toRem(5) toRem(12);
-    font-size: toRem(10);
-    line-height: 1;
-    text-transform: uppercase;
-    letter-spacing: toRem(4);
-    color: $colorLight;
-    text-align: center;
-    transition: background-color 0.3s ease 0s;
 
-    &--new {
-      background-color: $colorBlue900;
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: $colorBlue100;
-        }
-      }
-    }
-    &--best {
-      background-color: $colorBlue100;
-      @media (any-hover: hover) {
-        &:hover {
-          background-color: $colorBlue900;
-        }
-      }
-    }
-  }
   // .cart-service__image-ibg
   &__image-ibg {
     display: block;
@@ -570,20 +540,40 @@
 //=====transformation===============================================================================================
 
 .transform {
+  position: relative;
+  @include adaptiveValue("padding-top", 120, 50);
+  @include adaptiveValue("padding-bottom", 120, 50);
+  background:
+    linear-gradient(270deg, #0e3055 0%, rgba(46, 46, 46, 0.14) 100%),
+    url("@img/transformation/bacgraund.jpg") 0 0 / cover no-repeat;
+  z-index: 1;
+
   // .transform__container
   &__container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    z-index: 2;
   }
   // .transform__before-after
   &__before-after {
+    margin-right: toRem(50);
   }
   // .transform__content
   &__content {
+  }
+  // .transform__title
+  &__title {
+    .box-header__title {
+      color: $colorGray100;
+    }
   }
   // .transform__items
   &__items {
   }
   // .transform__item
   &__item {
+    color: $colorLight;
   }
   // .transform__cart
   &__cart {
@@ -591,27 +581,43 @@
 }
 
 .before-after {
+  position: relative;
   // .before-after__item
   &__item {
     // .before-after__item--before
     &--before {
+      img {
+        max-width: 100%;
+      }
     }
     // .before-after__item--after
     &--after {
+      position: absolute;
+      width: 50%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      overflow: hidden;
+      img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+      }
     }
   }
-}
-.box-header {
-  // .box-header__label
-  &__label {
-    // .box-header__label--blue
-    &--blue {
-    }
+
+  &__arrow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: toRem(3);
+    background-color: $colorBlue100;
+    z-index: 2;
   }
-  // .box-header__title
-  &__title {
-  }
 }
+
 .cart-block {
   // .cart-block__image
   &__image {
