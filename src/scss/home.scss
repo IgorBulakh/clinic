@@ -568,3 +568,70 @@
 }
 
 //=====transformation===============================================================================================
+
+.transform {
+  // .transform__container
+  &__container {
+  }
+  // .transform__before-after
+  &__before-after {
+  }
+  // .transform__content
+  &__content {
+  }
+  // .transform__items
+  &__items {
+  }
+  // .transform__item
+  &__item {
+  }
+  // .transform__cart
+  &__cart {
+  }
+}
+
+.before-after {
+  // .before-after__item
+  &__item {
+    // .before-after__item--before
+    &--before {
+    }
+    // .before-after__item--after
+    &--after {
+    }
+  }
+}
+.box-header {
+  // .box-header__label
+  &__label {
+    // .box-header__label--blue
+    &--blue {
+    }
+  }
+  // .box-header__title
+  &__title {
+  }
+}
+.cart-block {
+  // .cart-block__image
+  &__image {
+  }
+  // .cart-block__body
+  &__body {
+  }
+  // .cart-block__header
+  &__header {
+  }
+  // .cart-block__text
+  &__text {
+  }
+  // .cart-block__info
+  &__info {
+  }
+  // .cart-block__price
+  &__price {
+  }
+  // .cart-block__labels
+  &__labels {
+  }
+}
