@@ -609,12 +609,52 @@
 
   &__arrow {
     position: absolute;
-    left: 0;
+    left: 50%;
     top: 0;
     height: 100%;
     width: toRem(3);
     background-color: $colorBlue100;
     z-index: 2;
+    &::after {
+      position: absolute;
+      content: "";
+      width: toRem(25);
+      height: toRem(25);
+      background-color: $colorBlue100;
+      border-radius: 50%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: grab;
+    }
+
+    &::before {
+      @extend %ic;
+      content: "\e90a";
+      position: absolute;
+      color: $colorLight;
+      z-index: 2;
+      left: 50%;
+      top: 50%;
+      transform: rotate(90deg) translate(-50%, 50%);
+      font-size: toRem(10);
+      opacity: 0;
+      transition: opacity 0.5s;
+    }
+
+    &--right {
+      &::before {
+        opacity: 1;
+        transform: rotate(0deg) translate(-50%, -50%);
+      }
+    }
+
+    &--left {
+      &::before {
+        transform: rotate(180deg) translate(50%, 50%);
+        opacity: 1;
+      }
+    }
   }
 }
 
