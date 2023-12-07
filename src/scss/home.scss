@@ -584,6 +584,10 @@
   position: relative;
   // .before-after__item
   &__item {
+    img {
+      user-select: none;
+      pointer-events: none;
+    }
     // .before-after__item--before
     &--before {
       img {
@@ -637,22 +641,27 @@
       left: 50%;
       top: 50%;
       transform: rotate(90deg) translate(-50%, 50%);
-      font-size: toRem(10);
+      font-size: toRem(0);
       opacity: 0;
+      pointer-events: none;
       transition: opacity 0.5s;
     }
 
     &--right {
       &::before {
+        font-size: toRem(10);
         opacity: 1;
+        pointer-events: auto;
         transform: rotate(0deg) translate(-50%, -50%);
       }
     }
 
     &--left {
       &::before {
-        transform: rotate(180deg) translate(50%, 50%);
+        font-size: toRem(10);
         opacity: 1;
+        pointer-events: auto;
+        transform: rotate(180deg) translate(50%, 50%);
       }
     }
   }
