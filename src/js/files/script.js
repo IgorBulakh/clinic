@@ -41,11 +41,21 @@ if (beforeAfter) {
 
         beforeAfterArrow.style.cssText = `left: ${posLeft}px`;
         afterItem.style.cssText = `width: ${way}%`;
+      } else if (posLeft >= beforeAfterSize.with) {
+        beforeAfterArrow.style.cssText = `left: ${beforeAfterSize.with}px`;
+        afterItem.style.cssText = `width: 0%`;
+      } else if (posLeft <= 0) {
+        beforeAfterArrow.style.cssText = `left: 0px`;
+        afterItem.style.cssText = `width: 100%`;
       }
     }
-    // beforeAfterArrow.addEventListener("dragstart", function (e) {
-    //   e.preventDefault();
-    // });
+    beforeAfterArrow.addEventListener(
+      "dragstart",
+      function (e) {
+        e.preventDefault();
+      },
+      { once: true }
+    );
 
     document.addEventListener("mousemove", beforeAfterArrowMove);
     document.addEventListener(
