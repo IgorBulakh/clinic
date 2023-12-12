@@ -486,6 +486,8 @@
   }
   // .cart-service__label
   &__label {
+    position: absolute;
+    z-index: 2;
     top: toRem(26);
     left: toRem(20);
   }
@@ -551,27 +553,35 @@
   // .transform__container
   &__container {
     position: relative;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: start;
+    display: flex;
+    align-items: flex-start;
     z-index: 2;
+
+    @media (max-width: $tablet) {
+      flex-direction: column-reverse;
+      align-items: stretch;
+    }
   }
   // .transform__before-after
   &__before-after {
-    // margin-right: toRem(50);
-    @include adaptiveValue("margin-right", 50, 20);
+    flex: 0 1 50%;
+    @include adaptiveValue("margin-right", 50, 0, 0, $containerWidth, 992);
   }
   // .transform__content
   &__content {
+    flex: 0 1 50%;
   }
   // .transform__title
   &__title {
-    @include adaptiveValue("padding-left", 50, 20);
     .box-header__title {
       color: $colorGray100;
     }
     &:not(:last-child) {
       margin-bottom: toRem(10);
+    }
+
+    @media (min-width: $tablet) {
+      @include adaptiveValue("padding-left", 50, 20);
     }
   }
   // .transform__items
@@ -676,11 +686,11 @@
   position: relative;
   @include adaptiveValue("padding-top", 30, 20);
   @include adaptiveValue("padding-bottom", 30, 20);
-  @include adaptiveValue("padding-left", 50, 20);
-  @include adaptiveValue("padding-right", 50, 20);
-  display: flex;
+  display: grid;
   align-items: start;
-  gap: toRem(30);
+  grid-template-columns: toRem(100) 1fr auto;
+  column-gap: toRem(30);
+  row-gap: toRem(10);
   color: $colorLight;
 
   &::before {
@@ -695,6 +705,15 @@
     transition: opacity 0.3s;
   }
 
+  @media (min-width: $tablet) {
+    @include adaptiveValue("padding-right", 50, 20);
+    @include adaptiveValue("padding-left", 50, 20);
+  }
+
+  @media (max-width: $mobileSmall) {
+    grid-template-columns: toRem(100) 1fr;
+  }
+
   @media (any-hover: hover) {
     &:hover {
       &::before {
@@ -705,7 +724,6 @@
   // .cart-block__image
   &__image {
     position: relative;
-    flex: 0 0 toRem(100);
     aspect-ratio: 1/1;
     overflow: hidden;
 
@@ -724,7 +742,6 @@
   // .cart-block__body
   &__body {
     position: relative;
-    flex: 1 1 auto;
     letter-spacing: toRem(1);
   }
   // .cart-block__header
@@ -755,7 +772,11 @@
   // .cart-block__info
   &__info {
     position: relative;
-    flex: 1 0 auto;
+
+    @media (max-width: $mobileSmall) {
+      grid-column: span 2;
+      justify-self: end;
+    }
   }
   // .cart-block__price
   &__price {
@@ -765,6 +786,9 @@
 
     &:not(:last-child) {
       margin-bottom: toRem(24);
+    }
+
+    @media (max-width: $mobileSmall) {
     }
   }
   // .cart-block__labels
