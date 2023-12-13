@@ -806,15 +806,19 @@
   }
   // .partners__items
   &__items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     row-gap: toRem(20);
     @include adaptiveValue("column-gap", 150, 50);
 
+    @media (min-width: $mobileMedium) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     @media (min-width: $tablet) {
-      flex-wrap: nowrap;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
   // .partners__item
