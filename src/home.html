@@ -333,62 +333,16 @@
 					</ul>
 				</div>
 			</div>
-			<div class="page__doctors doctors">
+			<section class="page__doctors doctors">
 				<div class="doctors__container">
 					<div class="doctors__title box-header box-header--center">
 						<div class="box-header__label">certificates</div>
 						<h2 class="box-header__title">our main doctors</h2>
 					</div>
 					<div class="doctors__body body-doctors">
-						<ul class="body-doctors__list list-doctor">
-							<li class="list-doctor__item">
-								<a class="list-doctor__box link-box" href="#">
-									<div class="link-box__image">
-										<img src="@img/doctors/doctor-2.jpg" alt="portrait doctor">
-									</div>
-									<div class="link-box__body">
-										<div class="link-box__name">jane cullen</div>
-										<div class="link-box__text">
-											<p>
-												Lorem ipsum dolor sit amet, conse ctetur.
-											</p>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="list-doctor__item">
-								<a class="list-doctor__box link-box" href="#">
-									<div class="link-box__image">
-										<img src="@img/doctors/doctor-3.jpg" alt="portrait doctor">
-									</div>
-									<div class="link-box__body">
-										<div class="link-box__name">annah gaiver</div>
-										<div class="link-box__text">
-											<p>
-												Lorem ipsum dolor sit amet, conse ctetur.
-											</p>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="list-doctor__item">
-								<a class="list-doctor__box link-box" href="#">
-									<div class="link-box__image">
-										<img src="@img/doctors/doctor-1.jpg" alt="portrait doctor">
-									</div>
-									<div class="link-box__body">
-										<div class="link-box__name">mark hill</div>
-										<div class="link-box__text">
-											<p>
-												Lorem ipsum dolor sit amet, conse ctetur.
-											</p>
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
+						<div class="body-doctors__list list-doctor"></div>
 						<div class="body-doctors__main-picture">
-							<img src="@img/doctors/main-img.png" alt="portraits doctor">
+							<!-- <img src="@img/doctors/main-img.png" alt="portraits doctor"> -->
 						</div>
 						<div class="body-doctors__info info-service">
 							<div class="info-service__header">
@@ -399,62 +353,264 @@
 									</p>
 								</div>
 							</div>
-							<div class="info-service__line skill-service">
-								<div class="skill-service__item">
-									<div class="skill-service__info">
-										<div class="skill-service__label">liposuction</div>
-										<div class="skill-service__value">80%</div>
-									</div>
-									<div style="width: 80%;" class="skill-service__line skill-service__line--green"></div>
-								</div>
-								<div class="skill-service__item">
-									<div class="skill-service__info">
-										<div class="skill-service__label">breast augmentation</div>
-										<div class="skill-service__value">90%</div>
-									</div>
-									<div style="width: 90%;" class="skill-service__line skill-service__line--blue"></div>
-								</div>
+							<div class="info-service__line skill-service"></div>
+							<ul class="info-service__stat statistic"></ul>
+						</div>
+					</div>
+					<div data-gallery class="doctors__gallery prof-gallery"></div>
+				</div>
+			</section>
+			<section class="page__timing timing">
+				<div class="timing__container">
+					<div class="timing__content">
+						<div class="timing__title-block box-header">
+							<div class="box-header__label box-header__label--blue">book an appointment</div>
+							<h2 class="box-header__title box-header__title--white">our timing</h2>
+						</div>
+						<div class="timing__text">
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non nunc <a href="#"> erosuspe ndisse
+									scelerisque
+									felis ante</a>, et
+								mattis felis scelerisque sodales.
+							</p>
+						</div>
+						<div class="timing__info info-timing">
+							<div class="info-timing__image">
+								<img src="@img/timing/doctor.png" alt="portrait doctor">
 							</div>
-							<ul class="info-service__stat statistic">
-								<li class="statistic__item">
-									<div class="statistic__value">23</div>
-									<div class="statistic__label">staf</div>
+							<ul class="info-timing__items timetable">
+								<li class="timetable__item">
+									<span class="timetable__day">monday</span>
+									<span class="timetable__tim">9 to 18</span>
 								</li>
-								<li class="statistic__item">
-									<div class="statistic__value">56</div>
-									<div class="statistic__label">dctors</div>
+								<li class="timetable__item">
+									<span class="timetable__day">tuesday</span>
+									<span class="timetable__tim">10 to 15</span>
 								</li>
-								<li class="statistic__item">
-									<div class="statistic__value">86</div>
-									<div class="statistic__label">visits</div>
+								<li class="timetable__item">
+									<span class="timetable__day">wednesday</span>
+									<span class="timetable__tim">9 to 18</span>
+								</li>
+								<li class="timetable__item">
+									<span class="timetable__day">thursday</span>
+									<span class="timetable__tim">10 to 15</span>
+								</li>
+							</ul>
+							<a class="info-timing__phone" href="tel:+15618426141">+1 561 842 6141</a>
+						</div>
+					</div>
+					<div class="timing__calendar calendar">
+						<div class="calendar__box">
+							<div class="calendar__header header-calendar">
+								<button disabled class="header-calendar__arrow header-calendar__arrow--prev _icon-row"></button>
+								<div class="header-calendar__mount">february 2023</div>
+								<button class="header-calendar__arrow header-calendar__arrow--next _icon-row"></button>
+							</div>
+							<div class="calendar__week week-calendar">
+								<div class="week-calendar__day">mon</div>
+								<div class="week-calendar__day">tue</div>
+								<div class="week-calendar__day">wed</div>
+								<div class="week-calendar__day">thu</div>
+								<div class="week-calendar__day">fri</div>
+								<div class="week-calendar__day">sat</div>
+								<div class="week-calendar__day">sun</div>
+							</div>
+							<div class="calendar__day day-calendar">
+								<div class="day-calendar__number">30</div>
+								<div class="day-calendar__number">31</div>
+								<div class="day-calendar__number">1</div>
+								<div class="day-calendar__number">2</div>
+								<div class="day-calendar__number">3</div>
+								<div class="day-calendar__number">4</div>
+								<div class="day-calendar__number">5</div>
+								<div class="day-calendar__number">6</div>
+								<div class="day-calendar__number">7</div>
+								<div class="day-calendar__number">8</div>
+								<div class="day-calendar__number">9</div>
+								<div class="day-calendar__number">10</div>
+								<div class="day-calendar__number">11</div>
+								<div class="day-calendar__number">12</div>
+								<div class="day-calendar__number">13</div>
+								<div class="day-calendar__number">14</div>
+								<div class="day-calendar__number">15</div>
+								<div class="day-calendar__number">16</div>
+								<div class="day-calendar__number">17</div>
+								<div class="day-calendar__number">18</div>
+								<div class="day-calendar__number">19</div>
+								<div class="day-calendar__number">20</div>
+								<div class="day-calendar__number">21</div>
+								<div class="day-calendar__number day-calendar__number--style">22</div>
+								<div class="day-calendar__number day-calendar__number--style">23</div>
+								<div class="day-calendar__number day-calendar__number--style">24</div>
+								<div class="day-calendar__number">25</div>
+								<div class="day-calendar__number">26</div>
+								<div class="day-calendar__number day-calendar__number--style">27</div>
+								<div class="day-calendar__number day-calendar__number--style">28</div>
+								<div class="day-calendar__number">1</div>
+								<div class="day-calendar__number">2</div>
+								<div class="day-calendar__number">3</div>
+								<div class="day-calendar__number">4</div>
+								<div class="day-calendar__number">5</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__products products">
+				<div class="products__container">
+					<div class="products__title-block box-header box-header--center">
+						<div class="box-header__label">shop now</div>
+						<h2 class="box-header__title">find your products</h2>
+					</div>
+					<ul class="products__list">
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 19</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-1.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">soap</div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 50</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-2.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">serum </div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 25</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-3.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">detergent </div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 99</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-6.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">cream</div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 150</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-4.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">detergent</div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+						<li class="products__item">
+							<article class="products__cart cart-products">
+								<a href="#" class="cart-products__body">
+									<div class="cart-products__offer">$ 75</div>
+									<div class="cart-products__image-ibg">
+										<img src="@img/products/prod-5.jpg" alt="product crema">
+									</div>
+									<div class="cart-products__name">filter</div>
+								</a>
+								<div class="cart-products__info info-product">
+									<h4 class="info-product__title">shop info</h4>
+									<a href="#" class="info-product__item">Terms and Conditions</a>
+									<a href="#" class="info-product__item">Services and <span>Returns</span></a>
+									<a href="#" class="info-product__item">Solidarity Gifts</a>
+								</div>
+							</article>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section class="page__promotions promotions">
+				<div class="promotions__container">
+					<div class="promotions__content content-promotions">
+						<div class="content-promotions__title-block box-header">
+							<div class="box-header__label box-header__label--blue">don't lose</div>
+							<h2 class="box-header__title box-header__title--white">all promotions</h2>
+						</div>
+						<div class="content-promotions__text">
+							<p>
+								Suspendisse commodo bibendum purus at hendrerit. Vivamus aliquam bibendum fringilla. Praesent cursus
+								felis nunc, quis
+								vulputate sapien posuere vitae. Aliquam erat volutpat. Cras egestas porta massa eget pulvinar cras non
+								enim et dui
+								pharetra hendrerit mattis.
+							</p>
+						</div>
+						<div class="content-promotions__payment">
+							<div class="content-promotions__subtitle">payment options :</div>
+							<ul class="content-promotions__list">
+								<li class="content-promotions__item _icon-visa">
+								</li>
+								<li class="content-promotions__item _icon-paypal">
+								</li>
+								<li class="content-promotions__item _icon-mastercart">
+								</li>
+								<li class="content-promotions__item _icon-stripe">
 								</li>
 							</ul>
 						</div>
 					</div>
-					<ul data-gallery class="doctors__galery prof-galery">
-						<li class="prof-galery__item">
-							<a href="@img/doctors/galeryBig-1.jpg.jpg">
-								<img src="@img/doctors/galery-1.jpg" alt="marcer bubs">
-							</a>
-						</li>
-						<li class="prof-galery__item">
-							<a href="#">
-								<img src="@img/doctors/galery-2.jpg" alt="marcer bubs">
-							</a>
-						</li>
-						<li class="prof-galery__item">
-							<a href="#">
-								<img src="@img/doctors/galery-3.jpg" alt="marcer bubs">
-							</a>
-						</li>
-						<li class="prof-galery__item">
-							<a href="#">
-								<img src="@img/doctors/galery-4.jpg" alt="marcer bubs">
-							</a>
-						</li>
-					</ul>
+					<div class="promotions__info info-promotions">
+						<div class="info-promotions__sale sale-block">
+							<div class="sale-block__label">up to</div>
+							<div class="sale-block__value">50 %</div>
+							<div class="sale-block__select">on selected times</div>
+						</div>
+						<div class="info-promotions__image">
+							<img src="@img/products/complete.png" alt="crema butles">
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>

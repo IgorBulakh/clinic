@@ -29,6 +29,20 @@
     // .page__partners
     &__partners {
     }
+
+    // .page__doctors
+    &__doctors {
+    }
+
+    // .page__timing
+    &__timing {
+    }
+    // .page__products
+    &__products {
+    }
+    // .page__promotions
+    &__promotions {
+    }
   }
 
   // .page__touch-section
@@ -94,6 +108,10 @@
     letter-spacing: toRem(1);
     text-transform: capitalize;
     color: $colorGray900;
+
+    &--white {
+      color: $colorLight;
+    }
 
     &--big {
       @include adaptiveValue("font-size", 55, 28);

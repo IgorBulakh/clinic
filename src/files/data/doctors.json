@@ -1,0 +1,73 @@
+{
+  "doctors":[
+    {
+      "id": 1,
+      "isActive": true,
+      "name": "mark hill",
+      "position": "<p>Lorem ipsum dolor sit amet, conse ctetur.</p>",
+      "media": {
+        "avatar": "doctors/doctor-1.jpg",
+        "main": "doctors/main-img.png",
+        "gallery": {
+          "small": ["doctors/galery-1.jpg","doctors/galery-2.jpg","doctors/galery-3.jpg","doctors/galery-4.jpg"],
+          "big": ["doctors/galeryBig-1.jpg","doctors/galeryBig-2.jpg","doctors/galeryBig-3.jpg","doctors/galeryBig-4.jpg"]
+          } 
+      },
+      "skils": {
+        "liposuction" : 80,
+        "breast augmentation" : 90
+      },
+      "stat": {
+        "staf": 23,
+        "doctors": 56,
+        "visits": 86 
+      }
+    },
+    {
+      "id": 2,
+      "isActive": false,
+      "name": "jane cullen",
+      "position": "<p>Lorem ipsum dolor sit amet, conse ctetur.</p>",
+      "media": {
+        "avatar": "doctors/doctor-2.jpg",
+        "main": "doctors/main-img.png",
+        "gallery":{
+          "small": ["doctors/galery-1.jpg","doctors/galery-2.jpg"],
+          "big": ["doctors/galeryBig-1.jpg","doctors/galeryBig-2.jpg"]
+          }
+      },
+      "skils": {
+        "liposuction" : 80,
+        "cosmetical" : 25,
+        "breast augmentation" : 30
+      },
+      "stat": {
+        "staf": 16,
+        "visits": 56 
+      }
+    },
+    {
+      "id": 3,
+      "isActive": false,
+      "name": "annah gaiver",
+      "position": "<p>Lorem ipsum dolor sit amet, conse ctetur.</p>",
+      "media": {
+        "avatar": "doctors/doctor-3.jpg",
+        "main": "doctors/main-img.png",
+        "gallery":{
+          "small": ["doctors/galery-1.jpg","doctors/galery-2.jpg","doctors/galery-4.jpg"],
+          "big": ["doctors/galeryBig-1.jpg","doctors/galeryBig-2.jpg","doctors/galeryBig-4.jpg"]
+          }
+      },
+      "skils": {
+        "breast augmentation" : 90,
+        "liposuction" : 80
+      },
+      "stat": {
+        "staf": 10,
+        "doctors": 36,
+        "visits": 55 
+      }
+    }
+  ]
+}
