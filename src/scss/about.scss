@@ -1,0 +1,193 @@
+.about-page {
+  // .about-page__main
+  &__main {
+  }
+  // .about-page__history
+  &__history {
+  }
+}
+
+//====hero===============================================================================================
+
+.hero {
+  position: relative;
+  @include adaptiveValue("padding-top", 295, 90);
+  @include adaptiveValue("padding-bottom", 140, 50);
+  // .hero__container
+  &__container {
+  }
+  // .hero__title
+  &__title {
+    position: relative;
+    z-index: 2;
+    .box-header__title {
+      @include adaptiveValue("font-size", 60, 30);
+    }
+  }
+  // .hero__banner
+  &__banner-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img {
+      object-position: bottom;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba($colorGray900, 0.45) 0%, rgba($colorGray900, 0.22) 100%);
+    }
+  }
+}
+
+//====history===============================================================================================
+
+.history {
+  position: relative;
+  @include adaptiveValue("padding-top", 70, 30);
+  @include adaptiveValue("padding-bottom", 70, 30);
+  background: url("@img/history/back.jpg") top / cover no-repeat;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($colorLight, 0.8);
+  }
+  // .history__container
+  &__container {
+    position: relative;
+    display: grid;
+    row-gap: toRem(30);
+    align-items: start;
+
+    z-index: 2;
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 38.75% 1fr; /* 465/1200 */
+      column-gap: toRem(50);
+    }
+  }
+  // .history__picture-box
+  &__picture-box {
+  }
+  // .history__info
+  &__info {
+  }
+}
+.box-picture {
+  position: relative;
+  aspect-ratio: 465 / 435;
+
+  // .box-picture__image-ibg
+  &__image-ibg {
+    margin-right: toRem(50);
+    min-height: 100%;
+  }
+  // .box-picture__stat
+  &__stat {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include adaptiveValue("row-gap", 20, 10);
+    @include adaptiveValue("padding", 30, 10);
+    width: 51.612903%; /* 240/465 */
+    aspect-ratio: 240/233;
+    text-align: center;
+    background: url("@img/transformation/bacgraund.jpg") bottom / cover no-repeat;
+    right: 0;
+    top: 50%;
+    transform: translate(0, -50%);
+    color: $colorLight;
+    z-index: 2;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($colorBlue900, 0.7);
+    }
+
+    @media (max-width: $tablet) {
+    }
+  }
+  // .box-picture__icon
+  &__icon {
+    position: relative;
+    z-index: 2;
+    img {
+      width: toRem(55);
+    }
+  }
+  // .box-picture__value
+  &__value {
+    position: relative;
+    @include adaptiveValue("font-size", 50, 20);
+    font-weight: 700;
+    line-height: 1.2;
+    z-index: 2;
+  }
+  // .box-picture__text
+  &__text {
+    position: relative;
+    font-size: toRem(12);
+    letter-spacing: toRem(2);
+    text-transform: uppercase;
+    z-index: 2;
+  }
+}
+.info-history {
+  // .info-history__title-block
+  &__title-block {
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+  }
+  // .info-history__text
+  &__text {
+    display: grid;
+    column-gap: toRem(15);
+    row-gap: toRem(20);
+    line-height: 1.6;
+    letter-spacing: toRem(1);
+
+    &:not(:last-child) {
+      margin-bottom: toRem(45);
+    }
+
+    @media (min-width: $mobileMedium) {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: toRem(30);
+    }
+  }
+  // .info-history__data
+  &__data {
+    display: grid;
+    gap: toRem(20);
+
+    @media (min-width: $mobileMedium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  // .info-history__content-data
+  &__content-data {
+  }
+  // .info-history__signature
+  &__signature {
+  }
+}

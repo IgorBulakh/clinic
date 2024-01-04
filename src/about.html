@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"AboutAs"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="about-page">
+      <section class="about-page__main hero">
+        <div class="hero__banner-ibg">
+          <img src="@img/transformation/bacgraund.jpg" alt="hand and instruments">
+        </div>
+        <div class="hero__container">
+          <div class="hero__title box-header box-header--center">
+            <h2 class="box-header__title box-header__title--white">about us</h2>
+          </div>
+        </div>
+      </section>
+      <section class="about-page__history history">
+        <div class="history__container">
+          <div class="history__picture-box box-picture">
+            <div class="box-picture__image-ibg">
+              <img src="@img/history/left-picture.jpg" alt="woman face & hands">
+            </div>
+            <div class="box-picture__stat">
+              <div class="box-picture__icon">
+                <img src="@img/history/icon.png" alt="icon">
+              </div>
+              <div class="box-picture__value">+ 76</div>
+              <div class="box-picture__text">years on market</div>
+            </div>
+          </div>
+          <div class="history__info info-history">
+            <div class="info-history__title-block box-header">
+              <div class="box-header__label box-header__label--blue">hour history</div>
+              <h2 class="box-header__title">from the start</h2>
+            </div>
+            <div class="info-history__text">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et metus augue. Mauris ut libero
+                eget.
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et metus augue. Mauris ut libero
+                eget.
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et metus augue. Mauris ut libero
+                eget.
+              </p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus et metus augue. Mauris ut libero
+                eget.
+              </p>
+            </div>
+            <div class="info-history__data">
+              <div class="info-history__content-data content-user">
+                <a class="content-user__avatar content-user__avatar--radius" href="#">
+                  <img src="@img/history/doc.jpg" alt="user photo">
+                </a>
+                <div class="content-user__info">
+                  <a class="content-user__name" href="#">victor smith</a>
+                  <div class="content-user__position">general manager</div>
+                </div>
+              </div>
+              <div class="info-history__signature">
+                <img src="@img/plastic/signature.png" alt="signature">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>
