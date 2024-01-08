@@ -119,6 +119,20 @@
     &--big {
       @include adaptiveValue("font-size", 55, 28);
     }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(22);
+    }
+  }
+
+  &__text {
+    margin: 0 auto;
+    line-height: 2;
+    letter-spacing: toRem(1);
+
+    &--light {
+      color: $colorLight;
+    }
   }
 }
 
