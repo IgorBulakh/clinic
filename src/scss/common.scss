@@ -239,3 +239,79 @@
     }
   }
 }
+
+.pattern-quality {
+  // .pattern-quality__item
+  &__item {
+    display: flex;
+    align-items: center;
+    gap: toRem(20);
+    padding: toRem(8) toRem(0);
+
+    .quality__pattern & {
+      @media (min-width: em(606)) {
+        justify-content: center;
+      }
+    }
+  }
+  // .pattern-quality__icon
+  &__icon {
+    flex: 0 0 toRem(52);
+
+    img {
+      max-width: 100%;
+    }
+  }
+  // .pattern-quality__content
+  &__content {
+    letter-spacing: toRem(1);
+    > * {
+      margin-bottom: toRem(14);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // .pattern-quality__title
+  &__title {
+    font-size: toRem(25);
+    line-height: 1.2;
+    text-transform: capitalize;
+    color: $colorGray900;
+  }
+  // .pattern-quality__text
+  &__text {
+    line-height: 1.6;
+  }
+}
+
+// <ul class="quality__pattern pattern-quality">
+//             <li class="pattern-quality__item">
+//               <div class="pattern-quality__icon">
+//                 <img src="@img/promotions/bust.png" alt="icon bust">
+//               </div>
+//               <div class="pattern-quality__content">
+//                 <h4 class="pattern-quality__title">creation</h4>
+//                 <div class="pattern-quality__text">Proin at varius arcu sed.</div>
+//               </div>
+//             </li>
+//             <li class="pattern-quality__item">
+//               <div class="pattern-quality__icon">
+//                 <img src="@img/promotions/lips.png" alt="icon bust">
+//               </div>
+//               <div class="pattern-quality__content">
+//                 <h4 class="pattern-quality__title">analyses</h4>
+//                 <div class="pattern-quality__text">Proin at varius arcu sed.</div>
+//               </div>
+//             </li>
+//             <li class="pattern-quality__item">
+//               <div class="pattern-quality__icon">
+//                 <img src="@img/promotions/face.png" alt="icon bust">
+//               </div>
+//               <div class="pattern-quality__content">
+//                 <h4 class="pattern-quality__title">marketing</h4>
+//                 <div class="pattern-quality__text">Proin at varius arcu sed.</div>
+//               </div>
+//             </li>
+//           </ul>

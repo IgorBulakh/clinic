@@ -499,7 +499,7 @@
 
 .quality {
   position: relative;
-  @include adaptiveValue("padding-top", 70, 30);
+  @include adaptiveValue("padding-top", 110, 30);
   @include adaptiveValue("padding-bottom", 60, 30);
   background: url("@img/plastic/backgraund.jpg") top / cover no-repeat;
 
@@ -510,7 +510,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba($colorLight, 0.8);
+    background: linear-gradient(180deg, rgba($colorLight, 0.8) 0%, rgba($colorLight, 1) 80%);
   }
   // .quality__container
   &__container {
@@ -519,6 +519,9 @@
   }
   // .quality__title-block
   &__title-block {
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 55, 35);
+    }
     .box-header__text {
       max-width: toRem(660);
     }
@@ -528,49 +531,211 @@
   }
   // .quality__pattern
   &__pattern {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(toRem(288), 1fr));
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    background-color: $colorLight;
   }
 }
 
 .offer-quality {
-}
-
-.pattern-quality {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(toRem(288), 1fr));
-  // .pattern-quality__item
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(10);
+  }
+
+  @media (max-width: $mobile) {
+    grid-template-columns: auto;
+  }
+
+  // .offer-quality__item
   &__item {
+    background-color: $colorLight;
+    box-shadow: 0px 0px 25px 0px rgba($colorGray700, 0.5);
+
+    @media (max-width: $tablet) {
+      &:nth-child(1) {
+        order: 2;
+      }
+      &:nth-child(3) {
+        order: 3;
+      }
+    }
+
+    // .offer-quality__item--big
+    &--big {
+      position: relative;
+      margin: toRem(-10);
+      z-index: 2;
+
+      &::after {
+        position: absolute;
+        content: "";
+        background:
+          url("@img/promotions/label.png") right top / toRem(70) no-repeat,
+          linear-gradient(-270deg, rgba($colorBlue900, 0.8) 0%, rgba($colorBlue100, 0.9) 100%),
+          url("@img/main/baner-1.jpg") center/ cover no-repeat;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+
+      @media (max-width: $tablet) {
+        margin: 0;
+        order: 1;
+        grid-column: span 2;
+      }
+
+      @media (max-width: $mobile) {
+        grid-column: span 1;
+      }
+    }
+  }
+  // .offer-quality__header
+  &__header {
+    padding: toRem(30);
+    text-align: center;
+    color: $colorLight;
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: "";
+      background:
+        linear-gradient(-270deg, rgba($colorBlue900, 0.8) 0%, rgba($colorBlue100, 0.9) 100%),
+        url("@img/promotions/backgraund.jpg") center/ cover no-repeat;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    > * {
+      margin-bottom: toRem(15);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .offer-quality__item--big & {
+      &:not(:last-child) {
+        margin-bottom: toRem(10);
+      }
+    }
+  }
+
+  // .offer-quality__title
+  &__title {
+    position: relative;
+    @include adaptiveValue("font-size", 25, 18);
+    line-height: 1.2;
+    letter-spacing: toRem(1);
+    text-transform: capitalize;
+    z-index: 2;
+  }
+  // .offer-quality__price
+  &__price {
+    position: relative;
+    @include adaptiveValue("font-size", 40, 30);
+    line-height: 1.2;
+    letter-spacing: toRem(1);
+    z-index: 2;
+
+    span {
+      @include adaptiveValue("font-size", 30, 20);
+      margin-right: toRem(10);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: toRem(20);
+    }
+
+    .offer-quality__item--big & {
+      @include adaptiveValue("font-size", 60, 40);
+    }
+  }
+  // .offer-quality__label
+  &__label {
+    position: relative;
+    font-size: toRem(12);
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: toRem(4);
+    z-index: 2;
+  }
+  // .offer-quality__body
+  &__body {
+    text-align: center;
+    padding: toRem(30);
+
+    @media (max-width: $mobileMedium) {
+      padding: toRem(15);
+    }
+
+    .offer-quality__item--big & {
+      padding: toRem(10) toRem(0) toRem(20) toRem(0);
+      position: relative;
+      color: $colorLight;
+      z-index: 2;
+    }
+  }
+  // .offer-quality__list-check
+  &__list-check {
+    &:not(:last-child) {
+      margin-bottom: toRem(30);
+    }
+    > * {
+      margin-bottom: toRem(10);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // .offer-quality__item-check
+  &__item-check {
     display: flex;
     align-items: center;
-    gap: toRem(20);
-    padding: toRem(8) toRem(0);
-
-    @media (min-width: em(606)) {
-      justify-content: center;
-    }
-  }
-  // .pattern-quality__icon
-  &__icon {
-    flex: 0 0 toRem(52);
-
-    img {
-      max-width: 100%;
-    }
-  }
-  // .pattern-quality__content
-  &__content {
+    @include adaptiveValue("gap", 24, 10);
     letter-spacing: toRem(1);
-  }
-  // .pattern-quality__title
-  &__title {
-    font-size: toRem(25);
-    line-height: 1.2;
-    text-transform: capitalize;
-    color: $colorGray900;
-    &:not(:last-child) {
-      margin-bottom: toRem(14);
+    line-height: 2;
+
+    .offer-quality__item--big & {
+      justify-content: center;
+      &::before {
+        display: none;
+      }
     }
   }
-  // .pattern-quality__text
-  &__text {
+  // .offer-quality__button
+  &__button {
+    display: inline-block;
+    font-size: toRem(11);
+    line-height: 1.2;
+    letter-spacing: toRem(4);
+    text-transform: uppercase;
+    padding: toRem(10) toRem(20);
+    color: $colorLight;
+    background-color: $colorBlue900;
+    transition: background-color 0.3s ease 0s;
+
+    .offer-quality__item--big & {
+      background-color: $colorBlue100;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        background-color: $colorBlue100;
+        .offer-quality__item--big & {
+          background-color: $colorBlue900;
+        }
+      }
+    }
   }
 }
+
+//====pattern===============================================================================================
