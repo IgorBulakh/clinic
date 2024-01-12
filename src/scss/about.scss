@@ -535,6 +535,8 @@
     grid-template-columns: repeat(auto-fit, minmax(toRem(288), 1fr));
     @include adaptiveValue("padding-top", 60, 30);
     @include adaptiveValue("padding-bottom", 60, 30);
+    gap: toRem(30);
+    padding: toRem(0) toRem(20);
     background-color: $colorLight;
   }
 }

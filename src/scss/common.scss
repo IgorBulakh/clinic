@@ -248,10 +248,8 @@
     gap: toRem(20);
     padding: toRem(8) toRem(0);
 
-    .quality__pattern & {
-      @media (min-width: em(606)) {
-        justify-content: center;
-      }
+    @media (min-width: ($tablet)) {
+      padding-left: toRem(25);
     }
   }
   // .pattern-quality__icon
@@ -264,6 +262,7 @@
   }
   // .pattern-quality__content
   &__content {
+    // flex: 1 1 auto;
     letter-spacing: toRem(1);
     > * {
       margin-bottom: toRem(14);
