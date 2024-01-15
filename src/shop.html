@@ -7,15 +7,204 @@
 <body>
   <div class="wrapper">
     @@include('html/_header.htm',{})
-    <main class="about-page">
-      <section class="about-page__main hero">
-        <div class="hero__banner-ibg">
-          <img src="@img/transformation/bacgraund.jpg" alt="hand and instruments">
+    <main class="shop-page">
+      <section class="shop-page__main shop-hero">
+        <div class="shop-hero__banner-ibg">
+          <img src="@img/main-shop/bacground-shop.jpg" alt="hand and instruments">
         </div>
-        <div class="hero__container">
-          <div class="hero__title box-header box-header--center">
-            <h2 class="box-header__title box-header__title--white">about us</h2>
+        <div class="shop-hero__container">
+          <div class="shop-hero__content">
+            <div class="shop-hero__title box-header box-header--center">
+              <h2 class="box-header__title box-header__title--white">our shop</h2>
+              <div class="box-header__text box-header__text--light">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc orci nisl, tempus ut sem a, scelerisque
+                  sollicitudin arcu. Phasellus porttitor dignissim nisl, vel aliquet enim.
+                </p>
+              </div>
+            </div>
+            <a class="shop-hero__button button" href="#">buy now</a>
           </div>
+          <ul class="shop-hero__list">
+            <li class="shop-hero__item">
+              <article class="shop-hero__cart cart-products">
+                <a href="#" class="cart-products__body">
+                  <div class="cart-products__offer">$ 99</div>
+                  <div class="cart-products__image-ibg">
+                    <img src="@img/products/prod-3.jpg" alt="product crema">
+                  </div>
+                  <div class="cart-products__name">cream</div>
+                </a>
+                <div class="cart-products__info info-product">
+                  <h4 class="info-product__title">shop info</h4>
+                  <a href="#" class="info-product__item">Terms and Conditions</a>
+                  <a href="#" class="info-product__item">Services and <span>Returns</span></a>
+                  <a href="#" class="info-product__item">Solidarity Gifts</a>
+                </div>
+              </article>
+            </li>
+            <li class="shop-hero__item">
+              <article class="shop-hero__cart cart-products">
+                <a href="#" class="cart-products__body">
+                  <div class="cart-products__offer">$ 19</div>
+                  <div class="cart-products__image-ibg">
+                    <img src="@img/products/prod-1.jpg" alt="product crema">
+                  </div>
+                  <div class="cart-products__name">soap</div>
+                </a>
+                <div class="cart-products__info info-product">
+                  <h4 class="info-product__title">shop info</h4>
+                  <a href="#" class="info-product__item">Terms and Conditions</a>
+                  <a href="#" class="info-product__item">Services and <span>Returns</span></a>
+                  <a href="#" class="info-product__item">Solidarity Gifts</a>
+                </div>
+              </article>
+            </li>
+            <li class="shop-hero__item">
+              <article class="shop-hero__cart cart-products">
+                <a href="#" class="cart-products__body">
+                  <div class="cart-products__offer">$ 75</div>
+                  <div class="cart-products__image-ibg">
+                    <img src="@img/products/prod-5.jpg" alt="product crema">
+                  </div>
+                  <div class="cart-products__name">filler</div>
+                </a>
+                <div class="cart-products__info info-product">
+                  <h4 class="info-product__title">shop info</h4>
+                  <a href="#" class="info-product__item">Terms and Conditions</a>
+                  <a href="#" class="info-product__item">Services and <span>Returns</span></a>
+                  <a href="#" class="info-product__item">Solidarity Gifts</a>
+                </div>
+              </article>
+            </li>
+            <li class="shop-hero__item">
+              <article class="shop-hero__cart cart-products">
+                <a href="#" class="cart-products__body">
+                  <div class="cart-products__offer">$ 150</div>
+                  <div class="cart-products__image-ibg">
+                    <img src="@img/products/prod-4.jpg" alt="product crema">
+                  </div>
+                  <div class="cart-products__name">detergent</div>
+                </a>
+                <div class="cart-products__info info-product">
+                  <h4 class="info-product__title">shop info</h4>
+                  <a href="#" class="info-product__item">Terms and Conditions</a>
+                  <a href="#" class="info-product__item">Services and <span>Returns</span></a>
+                  <a href="#" class="info-product__item">Solidarity Gifts</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="shop-page__product product-shop">
+        <div class="product-shop__container">
+          <div class="product-shop__title box-header box-header--center">
+            <div class="box-header__label">monthly sale</div>
+            <h2 class="box-header__title">daily promotions</h2>
+          </div>
+          <ul class="product-shop__list">
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-6.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title"> plumping</h4>
+                  <div class="daily-prod__price">$ 50</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-2.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title">serum</h4>
+                  <div class="daily-prod__price">$ 50</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-4.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title">detergent</h4>
+                  <div class="daily-prod__price">$ 150</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-5.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title">filler</h4>
+                  <div class="daily-prod__price">$ 75</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-1.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title">soap</h4>
+                  <div class="daily-prod__price">$ 19</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+            <li class="product-shop__item">
+              <article class="product-shop__cart daily-prod">
+                <a class="daily-prod__picture-ibg" href="#">
+                  <img src="@img/products/prod-3.jpg" alt="cosmetic">
+                </a>
+                <div class="daily-prod__content">
+                  <h4 class="daily-prod__title">cream</h4>
+                  <div class="daily-prod__price">$ 99</div>
+                  <a class="daily-prod__button button" href="#">read more</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="shop-page__services shop-services">
+        <div class="shop-services__wrap">
+          <div class="shop-services__background-ibg">
+            <img src="@img/shop-services/01.jpg" alt="doctor and woman">
+          </div>
+          <div class="shop-services__content">
+            <div class="shop-services__title box-header box-header--center">
+              <div class="box-header__label box-header__label--transparent">check services</div>
+              <h2 class="box-header__title box-header__title--white">facilities</h2>
+            </div>
+            <a class="shop-services__button button" href="#">view all</a>
+          </div>
+
+        </div>
+        <div class="shop-services__wrap">
+          <div class="shop-services__background-ibg">
+            <img src="@img/shop-services/02.jpg" alt="doctor and man">
+          </div>
+          <div class="shop-services__content">
+            <div class="shop-services__title box-header box-header--center">
+              <div class="box-header__label box-header__label--transparent">included</div>
+              <h2 class="box-header__title box-header__title--white">our shop</h2>
+            </div>
+            <a class="shop-services__button button" href="#">view all</a>
+          </div>
+
         </div>
       </section>
     </main>
