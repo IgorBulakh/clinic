@@ -1,0 +1,241 @@
+.gallery-page {
+  // .gallery-page__main
+  &__main {
+  }
+  // .gallery-page__hello
+  &__hello {
+  }
+
+  // .gallery-page__numbers
+  &__numbers {
+  }
+}
+
+//====gallery-hero===============================================================================================
+
+.gallery-hero {
+  position: relative;
+  @include adaptiveValue("padding-top", 295, 90);
+  @include adaptiveValue("padding-bottom", 140, 50);
+  // .gallery-hero__banner-ibg
+  &__banner-ibg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    img {
+      object-position: center;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(180deg, rgba($colorGray900, 0.45) 0%, rgba($colorGray900, 0.22) 100%);
+    }
+  }
+  // .gallery-hero__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .gallery-hero__title
+  &__title {
+    .box-header__title {
+      @include adaptiveValue("font-size", 60, 30);
+    }
+  }
+}
+
+//====gallery-hero===============================================================================================
+
+.hello {
+  position: relative;
+  @include adaptiveValue("padding-top", 70, 30);
+  @include adaptiveValue("padding-bottom", 70, 30);
+  background: url("@img/main-shop/bacground-prom.jpg") center / cover no-repeat;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, $colorLight 0%, rgba($colorLight, 0.58) 100%);
+  }
+  // .hello__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .hello__top
+  &__top {
+    display: grid;
+    align-items: start;
+    gap: toRem(30);
+    &:not(:last-child) {
+      @include adaptiveValue("margin-bottom", 70, 30);
+    }
+
+    @media (min-width: $tablet) {
+      grid-template-columns: 38.062284% auto;
+    }
+  }
+  // .hello__title
+  &__title {
+    @include adaptiveValue("font-size", 55, 30);
+    line-height: 1.2;
+    letter-spacing: toRem(1);
+    text-align: right;
+    color: $colorGray900;
+
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+  // .hello__profiles
+  &__profiles {
+    display: grid;
+    gap: toRem(30);
+
+    @media (min-width: $mobileSmall) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  // .hello__doctor
+  &__doctor {
+  }
+
+  // .hello__gallery
+  &__gallery {
+  }
+}
+
+.doctor-hello {
+  position: relative;
+  // .doctor-hello__content
+  &__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: toRem(28) toRem(15);
+    text-align: center;
+    color: $colorLight;
+    z-index: 2;
+  }
+  // .doctor-hello__name
+  &__name {
+    font-size: toRem(25);
+    line-height: 1.2;
+    letter-spacing: toRem(1);
+    text-transform: capitalize;
+
+    &:not(:last-child) {
+      margin-bottom: toRem(12);
+    }
+  }
+  // .doctor-hello__position
+  &__position {
+    font-size: toRem(12);
+    line-height: 1.2;
+    letter-spacing: toRem(4);
+    text-transform: uppercase;
+  }
+  // .doctor-hello__picture
+  &__picture-ibg {
+    position: relative;
+    aspect-ratio: 1/1;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: linear-gradient(0deg, rgba($colorGray900, 0.21) 0%, rgba($colorGray900, 0.04) 36%);
+    }
+  }
+}
+
+.gallery-hello {
+  display: grid;
+  gap: toRem(2);
+  // grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(toRem(290), 1fr));
+  // .gallery-hello__picture-ibg
+  &__picture-ibg {
+    aspect-ratio: 1/1;
+  }
+}
+
+//====gallery-hero===============================================================================================
+
+.number-stat {
+  position: relative;
+  @include adaptiveValue("padding-top", 100, 50);
+  @include adaptiveValue("padding-bottom", 100, 50);
+  background: url("@img/timing/bacgraund.jpg") center / cover no-repeat;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba($colorGray900, 0.4);
+  }
+  // .number-stat__container
+  &__container {
+    position: relative;
+    z-index: 2;
+  }
+  // .number-stat__block
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(toRem(250), 1fr));
+    @include adaptiveValue("column-gap", 40, 20);
+    row-gap: toRem(20);
+  }
+  // .number-stat__item
+  &__item {
+    color: $colorLight;
+    letter-spacing: toRem(1);
+    display: flex;
+    align-items: center;
+    @include adaptiveValue("column-gap", 50, 20);
+  }
+  // .number-stat__value
+  &__value {
+    flex: 0 0 toRem(70);
+    @include adaptiveValue("font-size", 55, 30);
+    line-height: 1.2;
+    text-transform: uppercase;
+  }
+  // .number-stat__content
+  &__content {
+    flex: 0 0 auto;
+    text-transform: capitalize;
+    > * {
+      margin-bottom: toRem(4);
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  // .number-stat__title
+  &__title {
+    font-size: toRem(25);
+    line-height: 1.2;
+  }
+  // .number-stat__text
+  &__text {
+  }
+}
