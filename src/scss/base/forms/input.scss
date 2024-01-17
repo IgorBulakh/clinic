@@ -9,13 +9,15 @@ textarea {
 	appearance: none;
 }
 .input {
+	background: #fff;
+
 	border-radius: 0 !important;
 	width: 100%;
 	display: block;
 	min-height: toRem(41);
-	// padding: 0px 20px;
-	background-color: transparent;
-	border-bottom: toRem(1) solid $colorLight;
+	padding: toRem(0) toRem(20);
+	background-color: $colorLight;
+	border: toRem(1) solid $colorGray300;
 	&._form-focus {
 	}
 	&._form-error {
@@ -32,6 +34,7 @@ textarea {
 }
 
 textarea.input {
-	resize: none;
-	padding: 0px 0px;
+	resize: vertical;
+	min-height: toRem(142);
+	padding: toRem(10) toRem(20);
 }
