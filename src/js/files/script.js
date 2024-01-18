@@ -181,7 +181,7 @@ function buildDoctor(activeDoctor) {
   for (const item in stats) {
     statItems += `
         <li class="statistic__item">
-          <div class="statistic__value">${stats[item]}</div>
+          <div data-digits-counter class="statistic__value">${stats[item]}</div>
           <div class="statistic__label">${item}</div>
         </li>`;
   }
