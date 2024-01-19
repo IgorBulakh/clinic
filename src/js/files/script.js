@@ -147,6 +147,8 @@ function initDoctors(data) {
   }
 }
 
+// doctorsInfo
+
 function buildDoctor(activeDoctor) {
   const mainPhoto = activeDoctor.media.main;
   const skills = activeDoctor.skils;
@@ -201,3 +203,59 @@ function buildDoctor(activeDoctor) {
   doctorsGallery.innerHTML = galleryItems;
   flsModules.gallery[0].galleryClass.refresh();
 }
+
+// slideScroll
+
+const gallery = document.querySelector(".slider-gallery");
+if (gallery && !isMobile.any()) {
+  window.addEventListener("scroll", function (e) {
+    const gWidth = gallery.offsetWidth;
+    const gRow = document.querySelectorAll(".slider-gallery__row");
+    const wHeight = window.innerHeight;
+    gRow.forEach((gRowItem, index) => {
+      const gItems = gRowItem.querySelectorAll(".slider-gallery__item");
+      let dRowWidth = 0;
+      gItems.forEach((gItem) => {
+        dRowWidth += gItem.offsetWidth + 20;
+      });
+
+      dRowWidth = dRowWidth - 20;
+
+      const gWay = dRowWidth - gWidth;
+
+      if (gWay > 0) {
+        const gRowHeight = gRowItem.offsetHeight;
+        const gRowTopPos = gRowItem.getBoundingClientRect().top;
+        const gRowTop = wHeight - gRowTopPos;
+        const slideDirection = index % 2 === 0 ? -1 : 1;
+
+        if (gRowTop >= gRowHeight) {
+          const sWay = ((gRowTop - gRowHeight) / (wHeight - gRowHeight)) * 100;
+
+          gRowItem.style.cssText = `transform: translateX(${
+            (gWay / 100) * sWay * slideDirection
+          }px)`;
+
+          if (gRowTop >= wHeight) {
+            gRowItem.style.cssText = `transform: translateX(${
+              gWay * slideDirection
+            }px)`;
+          }
+        } else {
+          gRowItem.style.cssText = `transform: translateX(0) `;
+        }
+      }
+    });
+  });
+}
+
+// activePage
+
+const currentPage = window.location.href;
+
+const menuLinks = document.querySelectorAll(".menu__list a");
+menuLinks.forEach(function (link) {
+  if (link.href === currentPage) {
+    link.classList.add("activeCurrent");
+  }
+});

@@ -264,6 +264,10 @@
 		letter-spacing: toRem(3);
 		color: $colorGray300;
 
+		&.activeCurrent {
+			color: $colorBlue100;
+		}
+
 		&::after {
 			position: absolute;
 			content: "";
