@@ -92,10 +92,10 @@
 
 .body-header {
 	display: grid;
-	grid-template-columns: auto auto 1fr;
+	grid-template-columns: auto 1fr auto;
 	align-items: center;
 	column-gap: toRem(80);
-	// @include adaptiveValue("gap", 90, 20);
+	@include adaptiveValue("column-gap", 80, 20);
 
 	@media (max-width: $pc) {
 		// grid-template-columns: 1fr auto 1fr;
